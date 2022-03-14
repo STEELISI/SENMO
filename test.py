@@ -5,7 +5,7 @@ import pandas as pd
 import tensorflow as tf
 from transformers import TFBertModel
 from utils import read_df, get_ids_masks, create_dataset, BertClassifier, \
-					label_cols, bert_model_name
+					label_cols, bert_model_name, get_keywords, not_in_keywords
 from metric import accuracy, true_positive, false_positive, \
 					none_accuracy, pernote_accuracy
 
@@ -38,6 +38,12 @@ def test(args):
 		predictions = np.append(predictions, binary_preds, axis=0)
 	df_preds = pd.DataFrame(predictions, columns=label_cols)
 	df_preds.insert(0, "Note", df["Note"])
+	# ### KEYWORDS CHECKING ###
+	if args.keywords:
+		keywords = get_keywords()
+		for index, row in df_preds.iterrows():
+			if not_in_keywords(row['Note'], keywords):
+				df_preds.loc[index, label_cols] = 0
 	### EVALUATION ###
 	with open(pred_path + "/score.txt", 'w') as score_file:
 		print('### Accuracy ###')
@@ -61,6 +67,7 @@ if __name__ == "__main__":
 	parser.add_argument("-t", type=str, help="path to input testing file")
 	parser.add_argument("-i", type=str, help="path to input model file——dir of saved model's weights")
 	parser.add_argument("-o", type=str, help="path to output prediction file")
+	parser.add_argument("--keywords", action=argparse.BooleanOptionalAction)
 	parser.add_argument("-m", type=str, help="max length: should be the same as the training one")
 	parser.add_argument("-b", type=str, help="batch size")
 	args = parser.parse_args()
