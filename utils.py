@@ -1,6 +1,9 @@
+import os
 import time
 import numpy as np
 import pandas as pd
+from nltk import word_tokenize
+from nltk.util import ngrams
 import tensorflow as tf
 from transformers import TFBertModel
 from transformers import BertTokenizer
@@ -77,3 +80,39 @@ def create_dataset(data_tuple, epochs=1, batch_size=32, buffer_size=100, train=T
 		dataset = dataset.prefetch(1)
 	return dataset
 
+def get_keywords():
+	# retrieve keywords if exist
+	if os.path.exists("./data/keyword_list.txt"):
+		print("...Keyword list loading complete")
+		with open("./data/keyword_list.txt", 'r') as keyword_file:
+			keywords = set()
+			for word in keyword_file.readlines():
+				keywords.add(word.strip())
+			return keywords
+	# construct keywords if not exist
+	keywords_path = "./data/Lexicon/"
+	filenames = [os.path.join(keywords_path, f) for f in os.listdir(keywords_path) if os.path.isfile(os.path.join(keywords_path, f))]
+	keywords = set()
+	for fn in filenames:
+		with open(fn, 'r') as keyword_file:
+			for line in keyword_file.readlines():
+				word = line.strip()
+				if word:
+					keywords.add(word.lower())
+	with open("./data/keyword_list.txt", 'w') as keyword_file:
+		for word in keywords:
+			keyword_file.write("{}\n".format(word))
+	print("...Keyword list building complete")
+	return keywords
+
+def not_in_keywords(note, keywords):
+	unigrams = word_tokenize(note)
+	bigrams = ngrams(unigrams, 2)
+	bigrams = [' '.join(bg) for bg in bigrams]
+	trigrams = ngrams(unigrams, 3)
+	trigrams = [' '.join(tg) for tg in trigrams]
+	tokens = unigrams + bigrams + trigrams
+	for t in tokens:
+		if t in keywords:
+			return False
+	return True
