@@ -47,7 +47,7 @@ Being gay papa,1,0,0,0,0,0,0,0,0
 I turned gay from WEHO,1,0,0,0,0,0,0,0,0
 Lyft driver thought you and courts were lesbians,1,0,0,0,0,0,0,0,0
 "Buy like, a gay zine or something get some queer art",1,0,0,0,0,0,0,0,0
-For the church of lesbians,1,0,0,0,0,0,0,0,0
+For the church of lesbians,1,0,0,0,1,0,0,0,0
 My lesbian goddess,1,0,0,0,0,0,0,0,0
 To keep covering up my homosexuality,1,0,0,0,0,0,0,0,0
 This ones for gay pat,1,0,0,0,0,0,0,0,0
@@ -113,7 +113,7 @@ sucking on my hairy balls,0,1,0,0,0,0,0,0,0
 Mooooooobies or boobies?,0,1,0,0,0,0,0,0,0
 "For unsolicited sexual acts, gave ya a penny extra",0,1,0,0,0,0,0,0,0
 Sexual acts,0,1,0,0,0,0,0,0,0
-jays birthday beach brothel,0,1,0,0,0,0,0,0,0
+jays birthday beach brothel,0,1,0,0,0,0,0,0,1
 Big Gigantic boobies,0,1,0,0,0,0,0,0,0
 sexual exploitation,0,1,0,0,0,0,0,0,0
 Sucking dicks,0,1,0,0,0,0,0,0,0
@@ -244,7 +244,7 @@ breast removal surgery,0,0,1,0,0,0,0,0,0
 colonoscopy,0,0,1,0,0,0,0,0,0
 male breast enhancement pills,0,0,1,0,0,0,0,0,0
 penile reduction surgery,0,0,1,0,0,0,0,0,0
-sexual reassignment surgery costs,0,0,1,0,0,0,0,0,0
+sexual reassignment surgery costs,1,1,1,0,0,0,0,0,0
 plastic surgery deposit,0,0,1,0,0,0,0,0,0
 gum surgery,0,0,1,0,0,0,0,0,0
 asthma,0,0,1,0,0,0,0,0,0
@@ -336,7 +336,7 @@ weed but not the good kind,0,0,0,1,0,0,0,0,0
 heroin spoons and a compass,0,0,0,1,0,0,0,0,0
 illegal drugs,0,0,0,1,0,1,0,0,0
 illegal drugs,0,0,0,1,0,1,0,0,0
-being an illegal immigrant,0,0,0,0,0,1,1,0,0
+being an illegal immigrant,0,0,0,0,0,1,0,0,0
 illegal items,0,0,0,0,0,1,0,0,0
 gambling debt,0,0,0,1,0,0,0,0,0
 shooting heroin sayin controversial things,0,0,0,1,0,1,0,0,0
@@ -344,7 +344,7 @@ gambling addicts annomious,0,0,0,1,0,0,0,0,0
 marijuana,0,0,0,1,0,0,0,0,0
 cheating at poker,0,0,0,1,0,0,0,0,0
 to fuel your crippling drug habit,0,0,0,1,0,0,0,0,0
-illegal immigration,0,0,0,0,1,1,1,0,0
+illegal immigration,0,0,0,0,0,1,0,0,0
 weed and drugs,0,0,0,1,0,0,0,0,0
 illegal drug purchase,0,0,0,1,0,1,0,0,0
 illegal drugs,0,0,0,1,0,1,0,0,0
@@ -388,7 +388,7 @@ illicit substances,0,0,0,1,0,1,0,0,0
 illegal activities,0,0,0,0,0,1,0,0,0
 all of the illegal drugz,0,0,0,1,0,1,0,0,0
 heroin,0,0,0,1,0,0,0,0,0
-illegal immigrants shouldn t be in public universities,0,0,0,0,0,1,1,0,0
+illegal immigrants shouldn t be in public universities,0,0,0,0,0,1,0,0,0
 weed,0,0,0,1,0,0,0,0,0
 narcotics,0,0,0,1,0,0,0,0,0
 more illegal drugs,0,0,0,1,0,0,0,0,0
@@ -399,7 +399,7 @@ heroin,0,0,0,1,0,0,0,0,0
 weed,0,0,0,1,0,0,0,0,0
 whatever illegal stuff your going to do,0,0,0,1,0,1,0,0,0
 illegal gambling,0,0,0,1,0,1,0,0,0
-illegal immigration support,0,0,0,1,0,1,1,0,0
+illegal immigration support,0,0,0,0,0,1,0,0,0
 illegal activities,0,0,0,0,0,1,0,0,0
 marijuana,0,0,0,1,0,0,0,0,0
 illegal things,0,0,0,0,0,1,0,0,0
@@ -483,7 +483,7 @@ no racist comment,0,0,0,0,1,0,0,0,0
 stupid japanese car,0,0,0,0,1,0,0,0,0
 black people,0,0,0,0,1,0,0,0,0
 throwing up everywhere racist comments to roomate,0,0,0,0,1,0,0,0,0
-meh an racist terrorist in newark,0,0,0,0,1,0,0,0,0
+meh an racist terrorist in newark,0,0,0,0,1,1,0,0,1
 she wass an american psychoo,0,0,0,0,1,0,0,0,0
 george bush doesn t care about black people,0,0,0,0,1,0,1,0,0
 black people,0,0,0,0,1,0,0,0,0
@@ -504,7 +504,7 @@ keeping you out of jail,0,0,0,0,0,1,0,0,0
 prison bail,0,0,0,0,0,1,0,0,0
 bailing me out of jail,0,0,0,0,0,1,0,0,0
 kidnapping and assault,0,0,0,0,0,1,0,0,0
-illegal drugs that are a crime to purchase,0,0,0,0,0,1,0,0,0
+illegal drugs that are a crime to purchase,0,0,0,1,0,1,0,0,0
 kermit suicide,0,0,0,0,0,1,0,0,0
 county jail,0,0,0,0,0,1,0,0,0
 bailing fig out of jail,0,0,0,0,0,1,0,0,0
@@ -519,7 +519,7 @@ robbery,0,0,0,0,0,1,0,0,0
 beth being a terrorist,0,0,0,0,0,1,0,0,0
 busting crime,0,0,0,0,0,1,0,0,0
 cable robbery,0,0,0,0,0,1,0,0,0
-highway robbery excessive profit or advantage derived from a business transaction,0,0,0,0,0,1,0,0,0
+robbery excessive profit or advantage derived from a business transaction,0,0,0,0,0,1,0,0,0
 another robbery,0,0,0,0,0,1,0,0,0
 attack,0,0,0,0,0,1,0,0,0
 straight robbery,0,0,0,0,0,1,0,0,0
@@ -551,8 +551,8 @@ that almost killed me,0,0,0,0,0,1,0,0,0
 ur going to jail,0,0,0,0,0,1,0,0,0
 suicide,0,0,0,0,0,1,0,0,0
 second shooting uber,0,0,0,0,0,1,0,0,0
-highway robbery,0,0,0,0,0,1,0,0,0
-highway robbery,0,0,0,0,0,1,0,0,0
+robbery,0,0,0,0,0,1,0,0,0
+robbery,0,0,0,0,0,1,0,0,0
 usury is a crime,0,0,0,0,0,1,0,0,0
 automatic assault rifle,0,0,0,0,0,1,0,0,0
 government conspiracy research funding,0,0,0,0,0,1,0,0,0
@@ -579,7 +579,7 @@ second shooting,0,0,0,0,0,1,0,0,0
 robbery,0,0,0,0,0,1,0,0,0
 robert shmurder bail,0,0,0,0,0,1,0,0,0
 assault jersey,0,0,0,0,0,1,0,0,0
-illegal drugs and guns,0,0,0,0,0,1,0,0,0
+illegal drugs and guns,0,0,0,1,0,1,0,0,0
 bailing you out of jail,0,0,0,0,0,1,0,0,0
 for getting my car out of jail,0,0,0,0,0,1,0,0,0
 help me pay my parking ticket so i don t go to jail,0,0,0,0,0,1,0,0,0
@@ -589,13 +589,13 @@ bailing me out of jail,0,0,0,0,0,1,0,0,0
 sexual exploitation,0,1,0,0,0,1,0,0,0
 suicide,0,0,0,0,0,1,0,0,0
 thanks for bailing me out of the liberty jail,0,0,0,0,0,1,0,0,0
-illegal immigration,0,0,0,1,0,0,1,0,0
+illegal immigration,0,0,0,0,0,1,0,0,0
 vote republican,0,0,0,0,0,0,1,0,0
-being an illegal immigrant,0,0,0,1,0,0,1,0,0
+being an illegal immigrant,0,0,0,0,0,1,0,0,0
 taxes are the biggest scam endured by the american people and should not be taken laying down,0,0,0,0,0,0,1,0,0
 obama turned my frogs gay,0,1,0,0,0,0,1,0,0
-illegal immigration support,0,0,0,1,0,0,1,0,0
-illegal immigration support,0,0,0,1,0,0,1,0,0
+illegal immigration support,0,0,0,0,0,1,0,0,0
+illegal immigration support,0,0,0,0,0,1,0,0,0
 i hate you and trump,0,0,0,0,0,0,1,0,0
 i hate donald trump,0,0,0,0,0,0,1,0,0
 democratic hate group roletrump,0,0,0,0,0,0,1,0,0
@@ -1004,3 +1004,17 @@ must be thaii,0,0,0,0,1,0,0,0,0
 mission chineseing d,0,0,0,0,1,0,0,0,0
 do you tok thai,0,0,0,0,1,0,0,0,0
 windians,0,0,0,0,1,0,0,0,0
+heroin,0,0,0,1,0,0,0,0,0
+marijuana,0,0,0,1,0,0,0,0,0
+cbd,0,0,0,1,0,0,0,0,0
+u r racist,0,0,0,0,1,0,0,0,0
+republicans,0,0,0,0,0,0,1,0,0
+vote for trump,0,0,0,0,0,0,1,0,0
+who knows,0,0,0,0,0,0,0,0,0
+refund,0,0,0,0,0,0,0,0,0
+For tossing my salad,0,0,0,0,0,0,0,0,0
+3x a month,0,0,0,0,0,0,0,0,0
+Lightning and cold airs,0,0,0,0,0,0,0,0,0
+Container Delivery,0,0,0,0,0,0,0,0,0
+Half fortyyty,0,0,0,0,0,0,0,0,0
+yumm yumm sauce,0,0,0,0,0,0,0,0,0
