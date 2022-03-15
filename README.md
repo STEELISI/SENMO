@@ -1,14 +1,19 @@
 # SENMO
 PETS 2022, Issue 3, **Paper #126: I know what you did on Venmo: Discovering privacy leaks in mobile social payments**.
+Authors: Rajat Tandon, Pithayuth Charnsethikul, Ishank Arora, Dhiraj Murthy, and Jelena Mirkovic
 
-This is the (partial) implementation of the paper.
-SENMO is short for SENsitive content on venMO. 
+The classification framework SENMO (SENsitive content on venMO) classifies a Venmo transaction note as one or more of the sensitive categories from Table 1. A note could also be classified as NON (non-sensitive), if it does not contain any sensitive information.
+
+This repository includes the tools SENMO and SENMO-npre.
+SENMO-npre: Classifies Venmo notes as one or more of the sensitive categories from Table 1 using BERT without applying sensitive keywords pre-filters on the classification input (i.e, without using the list of known sensitive keywords).
+SENMO: Classifies Venmo notes using BERT as one or more of the sensitive categories from Table 1 after applying sensitive keywords pre-filters on the classification input (i.e, using the list of known sensitive keywords).
+
 
 ## Overview
-The SENMO pipeline consists of three runnning scripts.
-1. [Preprocessing](#preprocessing): polish Venmo notes which are arbitrary to pure texts.
-2. [Train](#train): use the cleaned text inputs with their labels, Trainset, to fine-tune BERT.
-3. [Test](#test): evaluate the trained model on Testset and report scores.
+The SENMO pipeline consists of runnning the scripts.
+1. [Preprocessing](#preprocessing): clean Venmo notes, deleting extra whitespaces, stopwords, emojis, etc.
+2. [Train](#train): use the cleaned text inputs with their labels, training set (fine-tuning set as per the paper), to fine-tune BERT.
+3. [Test](#test): evaluate the trained model on the testing set (evaluation set as per the paper) and report scores.
 
 ## Requirements
 To run our code, please install the dependency packages by using the following command: 
