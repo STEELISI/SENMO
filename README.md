@@ -5,8 +5,8 @@ Authors: Rajat Tandon, Pithayuth Charnsethikul, Ishank Arora, Dhiraj Murthy, and
 The classification framework SENMO (SENsitive content on venMO) classifies a Venmo transaction note as one or more of the sensitive categories from Table 1. A note could also be classified as NON (non-sensitive), if it does not contain any sensitive information.
 
 This repository includes the tools SENMO and SENMO-npre.
-SENMO-npre: Classifies Venmo notes as one or more of the sensitive categories from Table 1 using BERT without applying sensitive keywords pre-filters on the classification input (i.e, without using the list of known sensitive keywords).
-SENMO: Classifies Venmo notes using BERT as one or more of the sensitive categories from Table 1 after applying sensitive keywords pre-filters on the classification input (i.e, using the list of known sensitive keywords).
+SENMO-npre: classifies Venmo notes as one or more of the sensitive categories from Table 1 using BERT without applying sensitive keywords pre-filters on the classification input (i.e, without using the list of known sensitive keywords).
+SENMO: classifies Venmo notes using BERT as one or more of the sensitive categories from Table 1 after applying sensitive keywords pre-filters on the classification input (i.e, using the list of known sensitive keywords).
 
 
 ## Overview
@@ -20,14 +20,16 @@ To run our code, please install the dependency packages by using the following c
 ```
 pip install -r requirements.txt
 ```
-**NOTE**: We use a Conda environment with Python 3.9.10 to run the experiment. This code is tested and `requirements.txt` is generated for MAC M1 architecture. 
+**NOTE**: We have tested our code on Python 3.7.7 and up. This code is tested and `requirements.txt` is generated for macOS M1 architecture. The code should work or can be made to work on other platforms too. 
 All packages can be installed by running `requirements.txt` except tensorflow (version 2.8.0). 
 For MAC M1, please follow the Apple instructions [here](https://developer.apple.com/metal/tensorflow-plugin/) to install tensorflow.
 For other platforms, tensorflow should be installed through the following Google instruction [here](https://www.tensorflow.org/install).
 
+You may also run into some issues while installing the "pyenchant" package if enchant library is missing in the machine. Some useful links for fixing these issues are: [link-1](https://pyenchant.github.io/pyenchant/install.html),[link-2](https://github.com/pyenchant/pyenchant/issues/164) and [link-3](https://stackoverflow.com/questions/29381919/importerror-the-enchant-c-library-was-not-found-please-install-it-via-your-o).
+
 ## Data
 We store the dataset we use for training and testing the model in `./data/`. 
-Specifically, inside `./data/`, we have `./data/train_orig.csv` or Trainset to fine-tune BERT and `./data/test_orig.csv` or Testset to evaluate the trained model.
+Specifically, inside `./data/`, we have `./data/train_orig.csv` or training set to fine-tune BERT and `./data/test_orig.csv` or testing set to evaluate the trained model.
 
 ## Preprocessing
 Use the following command to preprocess the data.
@@ -61,7 +63,7 @@ For more details about data preprocessing, please refer to Section 5.1 of the pa
 **Note**: we have to run `preprocessing.py` at least twice——one for `./data/train_orig.csv` and the other for `./data/test_orig.csv`.
 
 ## Train
-We fine-tune the pre-trained language model [BERT](https://huggingface.co/docs/transformers/model_doc/bert) by the preprocessed Trainset from the previous step.  
+We fine-tune the pre-trained language model [BERT](https://huggingface.co/docs/transformers/model_doc/bert) by the preprocessed training set from the previous step.  
 
 To train the model, use the following command.
 ```
@@ -83,7 +85,7 @@ We parse command line arguments specified in `train.config` (shown below) to `tr
 6
 ```
 We further explain these arguments:
-* -i: path to the preprocessed Trainset saved in the previous step.
+* -i: path to the preprocessed training set saved in the previous step.
 * -o: path to a directory that the model weights will be saved.
 * -m: max length or maximum number of tokens/words for each text input. In the paper, we set it to 30.
 * -b: batch size. In the paper, we set it to 32.
@@ -93,10 +95,10 @@ We further explain these arguments:
 For more details, please refer to Section 5.2 of the paper.
 
 ## Test
-We evaluate the fine-tuned model from the previous step on the separate (preprocessed) Testset. 
-To preprocess Testset, we run `preprocessing.py` by setting -i to `./data/test_orig.csv` and -o to `./data/test_clean.csv` (your choice).
+We evaluate the fine-tuned model from the previous step on the separate (preprocessed) testing set. 
+To preprocess testing set, we run `preprocessing.py` by setting -i to `./data/test_orig.csv` and -o to `./data/test_clean.csv` (your choice).
 
-Once the (preprocessed) Testset is ready, we run the following command to get the Testset predictions as well as evaluate the results.
+Once the (preprocessed) testing set is ready, we run the following command to get the testing set predictions as well as evaluate the results.
 ```
 python test.py @test.config
 ```
@@ -114,14 +116,14 @@ We parse command line arguments specified in `test.config` (shown below) to `tes
 32
 ```
 We further explain these arguments:
-* -t: path to the preprocessed Testset.
+* -t: path to the preprocessed testing set.
 * -i: path to the directory that the model weights were saved in the previous step.
-* -o: path to a directory that Testset predictions and evaluation results will be stored.
+* -o: path to a directory that testing set predictions and evaluation results will be stored.
 * -m: max length or maximum number of tokens/words for each text input (should be the same as specified in `train.config`).
 * -b: number of epochs (should be the same as specified in `train.config`).
 
 `test.py` will generated two output files: `pred.csv` and `score.txt` which will be saved in the directory specified by -o in `test.config`. 
-`pred.csv` is the model predictions with the same format as Testset. `score.txt` contains several evaluation scores. 
+`pred.csv` is the model predictions with the same format as testing set. `score.txt` contains several evaluation scores. 
 Specifically, we report accuracy, true positive, false positive and per-note accuracy for every class. For more details, please refer to `metric.py`.
 
 ## Bugs or questions?
