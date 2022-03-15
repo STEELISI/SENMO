@@ -4,8 +4,10 @@ Authors: Rajat Tandon, Pithayuth Charnsethikul, Ishank Arora, Dhiraj Murthy, and
 
 The classification framework SENMO (SENsitive content on venMO) classifies a Venmo transaction note as one or more of the sensitive categories from Table 1. A note could also be classified as NON (non-sensitive), if it does not contain any sensitive information.
 
-This repository includes the tools SENMO and SENMO-npre.
+This repository includes the basic version of the tools SENMO and SENMO-npre. The code here demonstrates the results presented in Table 13 of the paper for SENMO and SENMO-npre.
+
 SENMO-npre: classifies Venmo notes as one or more of the sensitive categories from Table 1 using BERT without applying sensitive keywords pre-filters on the classification input (i.e, without using the list of known sensitive keywords).
+
 SENMO: classifies Venmo notes using BERT as one or more of the sensitive categories from Table 1 after applying sensitive keywords pre-filters on the classification input (i.e, using the list of known sensitive keywords).
 
 
@@ -129,6 +131,10 @@ We further explain these arguments:
 `test.py` will generate two output files: `pred.csv` and `score.txt` which will be saved in the directory specified by -o in `test.config`. 
 `pred.csv` is the model predictions with the same format as testing set. `score.txt` contains several evaluation scores. 
 Specifically, we report accuracy, true positive, false positive and per-note accuracy for every class. For more details, please refer to `metric.py`.
+
+## Lexicon
+
+We also open-source the list of sensitive keywords for the different sensitive categories present inside data/Lexicon folder. The details about the references that we use to prepare it is shown in Table 11 of the paper.
 
 ## Questions?
 If you have any questions related to the code (i.e. run into problems while setting up dependencies or training/testing the model), feel free to email us at: (rajattan@usc.edu) and (charnset@usc.edu).
