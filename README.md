@@ -22,7 +22,7 @@ To run our code, please install the dependency packages by using the following c
 ```
 pip install -r requirements.txt
 ```
-**Note**: We have tested our code on Python 3.7.7 and up. This code is tested and `requirements.txt` is generated for macOS M1 architecture. The code should work or can be made to work on other platforms too. 
+**Note**: We have tested our code on Python 3.7.7 and up. `requirements.txt` has been generated for macOS M1 architecture. The code should work or can be made to work on other platforms too. 
 All packages can be installed by running `requirements.txt` except tensorflow (version 2.8.0). 
 For MAC M1, please follow the Apple instructions [here](https://developer.apple.com/metal/tensorflow-plugin/) to install tensorflow.
 For other platforms, tensorflow should be installed through the following Google instruction [here](https://www.tensorflow.org/install).
@@ -30,7 +30,7 @@ For other platforms, tensorflow should be installed through the following Google
 You may also run into some issues while installing the "pyenchant" package if enchant library is missing in the machine. Some useful links for fixing these issues are: [link-1](https://pyenchant.github.io/pyenchant/install.html),[link-2](https://github.com/pyenchant/pyenchant/issues/164) and [link-3](https://stackoverflow.com/questions/29381919/importerror-the-enchant-c-library-was-not-found-please-install-it-via-your-o).
 
 ## Data
-We store the dataset we use for training and testing the model in `./data/`. 
+We store the datasets that we use for training and testing the model in `./data/`. 
 Specifically, inside `./data/`, we have `./data/train_orig.csv` or training set to fine-tune BERT and `./data/test_orig.csv` or testing set to evaluate the trained model.
 
 ## Preprocessing
