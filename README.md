@@ -21,7 +21,7 @@ The SENMO pipeline consists of runnning the scripts.
 ## Requirements
 To run our code, please install the dependency packages by using the following command: 
 ```
-pip install -r requirements.txt
+pip install -r installation/requirements.txt
 ```
 **Note**: We have tested our code on Python 3.7.7 and up. `requirements.txt` has been generated for macOS M1 architecture. The code should work or can be made to work on other platforms too. 
 All packages can be installed by running `requirements.txt` except tensorflow (version 2.8.0). 
