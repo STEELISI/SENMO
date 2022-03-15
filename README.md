@@ -20,7 +20,7 @@ To run our code, please install the dependency packages by using the following c
 ```
 pip install -r requirements.txt
 ```
-**NOTE**: We have tested our code on Python 3.7.7 and up. This code is tested and `requirements.txt` is generated for macOS M1 architecture. The code should work or can be made to work on other platforms too. 
+**Note**: We have tested our code on Python 3.7.7 and up. This code is tested and `requirements.txt` is generated for macOS M1 architecture. The code should work or can be made to work on other platforms too. 
 All packages can be installed by running `requirements.txt` except tensorflow (version 2.8.0). 
 For MAC M1, please follow the Apple instructions [here](https://developer.apple.com/metal/tensorflow-plugin/) to install tensorflow.
 For other platforms, tensorflow should be installed through the following Google instruction [here](https://www.tensorflow.org/install).
@@ -57,7 +57,7 @@ We further explain the arguments specified above:
 "[blob](https://textblob.readthedocs.io/en/dev/)", 
 "[spellchecker](https://pyspellchecker.readthedocs.io/en/latest/)", 
 "[autocorrect](https://github.com/filyp/autocorrect)". 
-We use "regex" in all the experiments presented on the paper. 
+We use "regex" in all the experiments presented in the paper. 
 For more details about data preprocessing, please refer to Section 5.1 of the paper.
 
 **Note**: we have to run `preprocessing.py` at least twice——one for `./data/train_orig.csv` and the other for `./data/test_orig.csv`.
@@ -114,6 +114,7 @@ We parse command line arguments specified in `test.config` (shown below) to `tes
 30
 -b
 32
+--keywords
 ```
 We further explain these arguments:
 * -t: path to the preprocessed testing set.
@@ -121,11 +122,14 @@ We further explain these arguments:
 * -o: path to a directory that testing set predictions and evaluation results will be stored.
 * -m: max length or maximum number of tokens/words for each text input (should be the same as specified in `train.config`).
 * -b: number of epochs (should be the same as specified in `train.config`).
+* --keywords: To run SENMO, i.e. to use the list of known sensitive keywords for pre-filtering
+
+**Note**: To run SENMO-npre, delete the line "--keywords" from test.config file.
 
 `test.py` will generated two output files: `pred.csv` and `score.txt` which will be saved in the directory specified by -o in `test.config`. 
 `pred.csv` is the model predictions with the same format as testing set. `score.txt` contains several evaluation scores. 
 Specifically, we report accuracy, true positive, false positive and per-note accuracy for every class. For more details, please refer to `metric.py`.
 
-## Bugs or questions?
+## Questions?
 If you have any questions related to the code (i.e. run into problems while setting up dependencies or training/testing the model), 
-feel free to email me, Pithayuth (charnset@usc.edu).
+feel free to email us at: (rajattan@usc.edu) and (charnset@usc.edu).
