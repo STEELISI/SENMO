@@ -37,7 +37,7 @@ adr = re.compile("( (avenue|lane|road|boulevard|drive|street|ave|dr|rd|blvd|ln|s
 #===============================================================#
 
 PATH_TO_STOPWORDS_LIST = 'data/STOPWORDS.txt'
-PATH_TO_KEYWORDS_LIST = "data/UNIQ_KEYWORDS_LIST.txt"
+PATH_TO_KEYWORDS_LIST = "data/keyword_list.txt"
 with open(PATH_TO_STOPWORDS_LIST,'r') as fp:
 	for l in fp:
 		stopwords.add(l.strip())
@@ -69,10 +69,16 @@ def reduce_lengthening(tokens):
 			t.append(pattern.sub(r"\1\1", token))
 		elif(d.check(pattern_rm1.sub(r"\1", token))):
 			t.append(pattern_rm1.sub(r"\1", token))
+		elif(token.lower() in keywords):
+			t.append(token)
+		elif(pattern.sub(r"\1\1",token.lower()) in keywords):
+			t.append(pattern.sub(r"\1\1", token))
+		elif(pattern_rm1.sub(r"\1", token.lower()) in keywords):  
+			t.append(pattern_rm1.sub(r"\1", token))
 		else:
-			x = tree2conlltags(ne_chunk(pos_tag(token)))
-			x1 = tree2conlltags(ne_chunk(pos_tag(pattern.sub(r"\1\1", token))))
-			x2 = tree2conlltags(ne_chunk(pos_tag(pattern_rm1.sub(r"\1", token))))
+			x = tree2conlltags(ne_chunk(pos_tag(word_tokenize(token))))
+			x1 = tree2conlltags(ne_chunk(pos_tag(word_tokenize(pattern.sub(r"\1\1", token)))))
+			x2 = tree2conlltags(ne_chunk(pos_tag(word_tokenize(pattern_rm1.sub(r"\1", token)))))
 			if(len(x[0]) > 2 and ("B-" in x[0][2] or "I-" in x[0][2])):
 				t.append(token)
 			elif(len(x1[0]) > 2 and ("B-" in x1[0][2] or "I-" in x1[0][2])):
@@ -80,7 +86,7 @@ def reduce_lengthening(tokens):
 			elif(len(x2[0]) > 2 and ("B-" in x2[0][2] or "I-" in x2[0][2])):
 				t.append(pattern_rm1.sub(r"\1", token))
 			else:
-				t.append(token)	
+				t.append(token)
 				
 	return t
 #[pattern.sub(r"\1\1", token) for token in tokens]
@@ -132,12 +138,12 @@ Clean a note
 """
 def clean(note, libr):
 	tokens = nltk.word_tokenize(note)
-	tokens = convert_letters(tokens)
+	#tokens = convert_letters(tokens)
 
 	t1 = time.time()
 	tokens = spell_corrector(tokens,libr)
 	t2 = time.time()
-
+	tokens = convert_letters(tokens)
 	tokens = remove_stopwords(tokens)
 	tokens = remove_special(tokens)
 	tokens = remove_blanc(tokens)
