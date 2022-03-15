@@ -126,10 +126,12 @@ We further explain these arguments:
 
 **Note**: To run SENMO-npre, delete the line "--keywords" from test.config file.
 
-`test.py` will generated two output files: `pred.csv` and `score.txt` which will be saved in the directory specified by -o in `test.config`. 
+`test.py` will generate two output files: `pred.csv` and `score.txt` which will be saved in the directory specified by -o in `test.config`. 
 `pred.csv` is the model predictions with the same format as testing set. `score.txt` contains several evaluation scores. 
 Specifically, we report accuracy, true positive, false positive and per-note accuracy for every class. For more details, please refer to `metric.py`.
 
 ## Questions?
-If you have any questions related to the code (i.e. run into problems while setting up dependencies or training/testing the model), 
-feel free to email us at: (rajattan@usc.edu) and (charnset@usc.edu).
+If you have any questions related to the code (i.e. run into problems while setting up dependencies or training/testing the model), feel free to email us at: (rajattan@usc.edu) and (charnset@usc.edu).
+
+**Note**: BERT's fine-tuned models are non-deterministic. Hence, we get slightly different results everytime we re-train or fine-tune BERT on the same data. We may not get the exact same results but approximately similar results. 
+
