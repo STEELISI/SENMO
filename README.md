@@ -135,7 +135,7 @@ Specifically, we report accuracy, true positive, false positive and per-note acc
 
 ## Lexicon
 
-We also open-source the list of sensitive keywords for the different sensitive categories present inside data/Lexicon folder. The details about the references that we use to prepare it is shown in Table 11 of the paper.
+We also release as open-source the list of sensitive keywords for the different sensitive categories present inside data/Lexicon folder. The details about the references that we use to prepare it is shown in Table 11 of the paper.
 
 ## Questions?
 If you have any questions related to the code (i.e. run into problems while setting up dependencies or training/testing the model), feel free to email us at: (rajattan@usc.edu) and (charnset@usc.edu).
