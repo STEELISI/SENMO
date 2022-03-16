@@ -32,7 +32,12 @@ You may also run into some issues while installing the "pyenchant" package if en
 
 ## Data
 We store the datasets that we use for training and testing the model in `./data/`. 
-Specifically, inside `./data/`, we have `./data/train_orig.csv` or training set to fine-tune BERT and `./data/test_orig.csv` or testing set to evaluate the trained model.
+Specifically, inside `./data/`, we have `./data/train_clean.csv` or training set (fine-tuning set) to fine-tune BERT and `./data/test_clean.csv` or testing set (evaluation set) to evaluate the trained model.
+
+Training set (fine-tuning set): About 1,000 notes per category LGB, ADU, HEA, DAG, POL, RET, VCR, REL, LOC, NON from the dataset D2, were manually labelled by us for fine-tuning BERT.
+
+Testing set (evaluation set): About 100 notes per category LGB, ADU, HEA, DAG, POL, RET, VCR, REL, LOC, NON from the dataset D2, were manually labelled by us for creating this test set after removing the fine-tuning set entries from D2.
+
 
 ## Preprocessing
 Use the following command to preprocess the data.
