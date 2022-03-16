@@ -142,3 +142,4 @@ If you have any questions related to the code (i.e. run into problems while sett
 
 **Note**: BERT's fine-tuned models are non-deterministic. Hence, we get slightly different results everytime we re-train or fine-tune BERT on the same data. We may not get the exact same results but approximately similar results. 
 
+Also, the training set and testing set includes some duplicate notes too as different/same users post same notes too. For example, the note "marijuana" was posted more than once.
