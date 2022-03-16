@@ -133,9 +133,9 @@ We further explain these arguments:
 `pred.csv` is the model predictions with the same format as testing set. `score.txt` contains several evaluation scores. 
 Specifically, we report accuracy, true positive, false positive and per-note accuracy for every class. For more details, please refer to `metric.py`.
 
-## Lexicon
+## Lexicon : List of sensitive keywords
 
-We also release as open-source the list of sensitive keywords for the different sensitive categories present inside data/Lexicon folder. The details about the references that we use to prepare it is shown in Table 11 of the paper.
+We also release as open-source the list of sensitive keywords for the different sensitive categories present inside data/Lexicon folder. The details about the references that we use to prepare it is shown in Table 11 of the paper.  We build the list of keywords associated with sensitive content for different categories using various popular sources and prior published works.
 
 ## Questions?
 If you have any questions related to the code (i.e. run into problems while setting up dependencies or training/testing the model), feel free to email us at: (rajattan@usc.edu) and (charnset@usc.edu).
