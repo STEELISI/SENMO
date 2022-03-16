@@ -38,6 +38,7 @@ Training set (fine-tuning set): About 1,000 notes per category LGB, ADU, HEA, DA
 
 Testing set (evaluation set): About 100 notes per category LGB, ADU, HEA, DAG, POL, RET, VCR, REL, LOC, NON from the dataset D2, were manually labelled by us for creating this test set after removing the fine-tuning set entries from D2.
 
+Additional details about these datasets are provided in the paper, Section 5.2.
 
 ## Preprocessing
 Use the following command to preprocess the data.
@@ -145,6 +146,6 @@ We also release as open-source the list of sensitive keywords for the different 
 ## Questions?
 If you have any questions related to the code (i.e. run into problems while setting up dependencies or training/testing the model), feel free to email us at: (rajattan@usc.edu) and (charnset@usc.edu).
 
-**Note**: BERT's fine-tuned models are non-deterministic. Hence, we get slightly different results everytime we re-train or fine-tune BERT on the same data. We may not get the exact same results but approximately similar results. 
+**Note**: BERT's fine-tuned models are non-deterministic. Hence, we can get slightly different results every time we re-train or fine-tune BERT on the same data. We may not get the exact same results but approximately similar results. 
 
 Also, the training set and testing set includes some duplicate notes too as different/same users post same notes too. For example, the note "marijuana" was posted by multiple users.
