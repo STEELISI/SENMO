@@ -13,7 +13,7 @@ SENMO: classifies Venmo notes using BERT as one or more of the sensitive categor
 
 
 ## Overview
-The SENMO pipeline consists of runnning the scripts.
+The SENMO pipeline consists of running the scripts.
 1. [Preprocessing](#preprocessing): cleans Venmo notes, deleting extra whitespaces, stopwords, emojis, etc.
 2. [Train](#train): uses the cleaned text inputs with their labels, training set (fine-tuning set as per the paper), to fine-tune BERT.
 3. [Test](#test): evaluates the trained model on the testing set (evaluation set as per the paper) and report the classification accuracy.
