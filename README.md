@@ -148,4 +148,8 @@ If you have any questions related to the code (i.e. run into problems while sett
 
 **Note**: BERT's fine-tuned models are non-deterministic. Hence, we can get slightly different results every time we re-train or fine-tune BERT on the same data. We may not get the exact same results but approximately similar results. 
 
-Also, the training set and testing set includes some duplicate notes too as different/same users post same notes too. For example, the note "marijuana" was posted by multiple users.
+Also, the training set and testing set includes some duplicate notes too as different/same users post same notes too. For example, the note "marijuana" was posted by multiple users. Similarly, "For bailing me out of jail" is another such example.
+
+The main reason behind the duplicate entries in fine-tuning and evaluation datasets is that Venmo has a very high presence of duplicates. For example, the publicly available Venmo dataset (D2 in the paper) which comprises ~7.1M notes, contains approximately ~62% duplicate entries, coming from different Venmo notes by different users.
+
+Our classifier only applies to Venmo, since our fine-tuning/evaluation datasets reflect the composition and presence of duplicates in the original Venmo notes. We make no claims in the paper about the usefulness of this classifier to classify other sensitive content on other platforms. 
