@@ -34,6 +34,8 @@ SENMO-npre: classifies Venmo notes as one or more of the sensitive categories fr
 
 SENMO: classifies Venmo notes using BERT as one or more of the sensitive categories from Table 1 after applying sensitive keywords pre-filters on the classification input (i.e, using the list of known sensitive keywords).
 
+The repository also includes the key techniques with which we compare SENMO, i.e., BoW-NB (Naive Bayes on bag-of-words) and TF-IDF-NB (Naive Bayes on TF-IDF).
+
 
 ## Overview
 The SENMO pipeline consists of running the scripts.
@@ -156,7 +158,7 @@ We further explain these arguments:
 * -b: number of epochs (should be the same as specified in `train.config`).
 * --keywords: To run SENMO, i.e. to use the list of known sensitive keywords for pre-filtering
 
-**Note**: To run SENMO-npre, delete the line "--keywords" from test.config file.
+**Important Note**: To run SENMO-npre, delete the line "--keywords" from test.config file.
 
 `test.py` will generate two output files: `pred.csv` and `score.txt` which will be saved in the directory specified by -o in `test.config`. 
 `pred.csv` is the model predictions with the same format as testing set. `score.txt` contains several evaluation scores. 
@@ -169,10 +171,59 @@ We also release as open-source the list of sensitive keywords for the different 
 ## Questions?
 If you have any questions related to the code (i.e. run into problems while setting up dependencies or training/testing the model), feel free to email us at: (rajattan@usc.edu) and (charnset@usc.edu).
 
-**Note**: BERT's fine-tuned models are non-deterministic. Hence, we can get slightly different results every time we re-train or fine-tune BERT on the same data. We may not get the exact same results but approximately similar results. 
+**Important Note**: BERT's fine-tuned models are non-deterministic. Hence, we can get slightly different results every time we re-train or fine-tune BERT on the same data. We may not get the exact same results but approximately similar results. 
 
-Also, the training set and testing set includes some duplicate notes too as different/same users post same notes too. For example, the note "marijuana" was posted by multiple users. Similarly, "For bailing me out of jail" is another such example.
+Also, the training set and testing set does include duplicate notes because different/same users post same notes too. For example, the note "marijuana" was posted by multiple users. Similarly, "For bailing me out of jail" is another such example.
 
 The main reason behind the duplicate entries in fine-tuning and evaluation datasets is that Venmo has a very high presence of duplicates. For example, the Venmo dataset (D2 in the paper) which comprises ~7.1M notes, contains approximately ~62% duplicate entries, coming from different Venmo notes by different users.
 
 Our classifier only applies to Venmo, since our fine-tuning/evaluation datasets reflect the composition and presence of duplicates in the original Venmo notes. We make no claims in the paper about the usefulness of this classifier to classify other sensitive content on other platforms. 
+
+## TF-IDF-NB
+
+To run Naive Bayes on TF-IDF technique, we run the following command:
+
+```
+python nb.py @nb.config
+```
+We parse command line arguments specified in `nb.config` (shown below) to `nb.py`.
+```
+-i
+./data/train_clean.csv
+-t
+./data/test_clean.csv
+-o
+./prediction/
+-f
+TF-IDF
+```
+We further explain these arguments:
+* -t: path to the preprocessed testing set.
+* -i: path to the preprocessed training set.
+* -o: path to a directory that testing set predictions and evaluation results will be stored.
+* -f: this option should be TF-IDF.
+
+## BOW-NB
+
+To run Naive Bayes on bag-of-words technique, we run the following command:
+
+```
+python nb.py @nb.config
+```
+We parse command line arguments specified in `nb.config` (shown below) to `nb.py`.
+
+```
+-i
+./data/train_clean.csv
+-t
+./data/test_clean.csv
+-o
+./prediction/
+-f
+BOW
+```
+We further explain these arguments:
+* -t: path to the preprocessed testing set.
+* -i: path to the preprocessed training set.
+* -o: path to a directory that testing set predictions and evaluation results will be stored.
+* -f: this option should be BOW.
