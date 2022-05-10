@@ -5,27 +5,27 @@ Authors: Rajat Tandon, Pithayuth Charnsethikul, Ishank Arora, Dhiraj Murthy, and
 
 The classification framework SENMO (SENsitive content on venMO) classifies a Venmo transaction note as one or more of the sensitive categories from Table 1 of the paper (shown below as well). A note could also be classified as NON (non-sensitive), if it does not contain any sensitive information.
 
-Category Description Example
+Category|Description|Example
 
-ADU Adult “sexual pleasures”
+ADU|Adult|“sexual pleasures”
 
-LGB LGBTQ “gay rights activist”
+LGB|LGBTQ|“gay rights activist”
 
-HEA Health “For aids treatment. Get well soon”
+HEA|Health|“For aids treatment. Get well soon”
 
-DAG Drugs/alcohol/ gambling “for the weed that we gon smoke”
+DAG|Drugs/alcohol/gambling|“for the weed that we gon smoke”
 
-POL Political opinions “Bush did 9/11”
+POL|Political opinions|“Bush did 9/11”
 
-RET Race/ethnicity “Acting like a black man!!”
+RET|Race/ethnicity|“Acting like a black man!!”
 
-VCR Violence/crime “Aggravated assault in an uber”
+VCR|Violence/crime|“Aggravated assault in an uber”
 
-REL Relations “Your half of the divorce”
+REL|Relations|“Your half of the divorce”
 
-LOC Location “Train Rome to Salerno”
+LOC|Location|“Train Rome to Salerno”
 
-NON Non-sensitive "hair styling for photo shoot"
+NON|Non-sensitive|"hair styling for photo shoot"
 
 
 This repository includes the basic version of the tools SENMO and SENMO-npre. The code here demonstrates the results presented in Table 13 of the paper for SENMO and SENMO-npre.
