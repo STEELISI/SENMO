@@ -6,15 +6,25 @@ Authors: Rajat Tandon, Pithayuth Charnsethikul, Ishank Arora, Dhiraj Murthy, and
 The classification framework SENMO (SENsitive content on venMO) classifies a Venmo transaction note as one or more of the sensitive categories from Table 1 of the paper (shown below as well). A note could also be classified as NON (non-sensitive), if it does not contain any sensitive information.
 
 Category Description Example
+
 ADU Adult “sexual pleasures”
+
 LGB LGBTQ “gay rights activist”
+
 HEA Health “For aids treatment. Get well soon”
+
 DAG Drugs/alcohol/ gambling “for the weed that we gon smoke”
+
 POL Political opinions “Bush did 9/11”
+
 RET Race/ethnicity “Acting like a black man!!”
+
 VCR Violence/crime “Aggravated assault in an uber”
+
 REL Relations “Your half of the divorce”
+
 LOC Location “Train Rome to Salerno”
+
 NON Non-sensitive "hair styling for photo shoot"
 
 
@@ -163,6 +173,6 @@ If you have any questions related to the code (i.e. run into problems while sett
 
 Also, the training set and testing set includes some duplicate notes too as different/same users post same notes too. For example, the note "marijuana" was posted by multiple users. Similarly, "For bailing me out of jail" is another such example.
 
-The main reason behind the duplicate entries in fine-tuning and evaluation datasets is that Venmo has a very high presence of duplicates. For example, the publicly available Venmo dataset (D2 in the paper) which comprises ~7.1M notes, contains approximately ~62% duplicate entries, coming from different Venmo notes by different users.
+The main reason behind the duplicate entries in fine-tuning and evaluation datasets is that Venmo has a very high presence of duplicates. For example, the Venmo dataset (D2 in the paper) which comprises ~7.1M notes, contains approximately ~62% duplicate entries, coming from different Venmo notes by different users.
 
 Our classifier only applies to Venmo, since our fine-tuning/evaluation datasets reflect the composition and presence of duplicates in the original Venmo notes. We make no claims in the paper about the usefulness of this classifier to classify other sensitive content on other platforms. 
