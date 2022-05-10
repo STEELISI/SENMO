@@ -5,7 +5,7 @@ Authors: Rajat Tandon, Pithayuth Charnsethikul, Ishank Arora, Dhiraj Murthy, and
 
 The classification framework SENMO (SENsitive content on venMO) classifies a Venmo transaction note as one or more of the sensitive categories from Table 1 of the paper (shown below as well). A note could also be classified as NON (non-sensitive), if it does not contain any sensitive information.
 
-Category|Description|Example
+**Category|Description|Example**
 
 ADU|Adult|“sexual pleasures”
 
