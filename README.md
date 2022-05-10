@@ -5,7 +5,7 @@ Authors: Rajat Tandon, Pithayuth Charnsethikul, Ishank Arora, Dhiraj Murthy, and
 
 Webpage: https://steel.isi.edu/projects/venmo/
 
-The classification framework SENMO (SENsitive content on venMO) classifies a Venmo transaction note as one or more of the sensitive categories from Table 1 of the paper (shown below as well). A note could also be classified as NON (non-sensitive), if it does not contain any sensitive information.
+The classification framework SENMO (SENsitive content on venMO) classifies a Venmo transaction note as one or more of the sensitive categories from Table 1 in the paper (shown below as well). A note could also be classified as NON (non-sensitive), if it does not contain any sensitive information.
 
 **Category|Description|Example**
 
@@ -30,7 +30,7 @@ LOC|Location|“Train Rome to Salerno”
 NON|Non-sensitive|"hair styling for photo shoot"
 
 
-This repository includes the basic version of the tools SENMO and SENMO-npre. The code here demonstrates the results presented in Table 13 of the paper for SENMO and SENMO-npre.
+This repository includes the basic version of the tools SENMO and SENMO-npre. The code here demonstrates the results presented in Table 13 in the paper for SENMO and SENMO-npre.
 
 SENMO-npre: classifies Venmo notes as one or more of the sensitive categories from Table 1 using BERT without applying sensitive keywords pre-filters on the classification input (i.e, without using the list of known sensitive keywords).
 
@@ -94,7 +94,7 @@ We further explain the arguments specified above:
 "[spellchecker](https://pyspellchecker.readthedocs.io/en/latest/)", 
 "[autocorrect](https://github.com/filyp/autocorrect)". 
 We use "regex" in all the experiments presented in the paper. 
-For more details about data preprocessing, please refer to Section 5.1 of the paper.
+For more details about data preprocessing, please refer to Section 5.1 in the paper.
 
 **Note**: we have to run `preprocessing.py` at least twice——one for `./data/train_orig.csv` and the other for `./data/test_orig.csv`.
 
@@ -128,7 +128,7 @@ We further explain these arguments:
 * -l: learning rate. In the paper, we set it to 2e-5.
 * -e: number of epochs. In the paper, we set it to 6.
 
-For more details, please refer to Section 5.2 of the paper.
+For more details, please refer to Section 5.2 in the paper.
 
 ## Test
 We evaluate the fine-tuned model from the previous step on the separate (preprocessed) testing set. 
@@ -168,7 +168,7 @@ Specifically, we report accuracy, true positive, false positive and per-note acc
 
 ## Lexicon : List of sensitive keywords
 
-We also release as open-source the list of sensitive keywords for the different sensitive categories present inside data/Lexicon folder. The details about the references that we use to prepare it is shown in Table 11 of the paper.  We build the list of keywords associated with sensitive content for different categories using various popular sources and prior published works.
+We also release as open-source the list of sensitive keywords for the different sensitive categories present inside data/Lexicon folder. The details about the references that we use to prepare it is shown in Table 11 in the paper.  We build the list of keywords associated with sensitive content for different categories using various popular sources and prior published works.
 
 ## Questions?
 If you have any questions related to the code (i.e. run into problems while setting up dependencies or training/testing the model), feel free to email us at: (rajattan@usc.edu) and (charnset@usc.edu).
