@@ -36,7 +36,7 @@ SENMO-npre: classifies Venmo notes as one or more of the sensitive categories fr
 
 SENMO: classifies Venmo notes using BERT as one or more of the sensitive categories from Table 1 after applying sensitive keywords pre-filters on the classification input (i.e, using the list of known sensitive keywords).
 
-The repository also includes the key techniques with which we compare SENMO, i.e., BoW-NB (Naive Bayes on bag-of-words) and TF-IDF-NB (Naive Bayes on TF-IDF).
+The repository also includes the key techniques with which we compare SENMO, i.e., BoW-NB (Naive Bayes on bag-of-words (https://en.wikipedia.org/wiki/Bag-of-words_model)) and TF-IDF-NB (Naive Bayes on TF-IDF (https://en.wikipedia.org/wiki/Tf%E2%80%93idf)).
 
 
 ## Overview
