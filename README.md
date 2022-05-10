@@ -207,7 +207,7 @@ We further explain these arguments:
 
 **Note**: Again, we may not get the exact same results (as reported in the paper) but approximately similar results.
 
-## BOW-NB
+## BoW-NB
 
 To run Naive Bayes on bag-of-words technique, we run the following command:
 
