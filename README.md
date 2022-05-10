@@ -32,7 +32,7 @@ NON|Non-sensitive|"hair styling for photo shoot"
 
 This repository includes the basic version of the tools SENMO and SENMO-npre. The code here demonstrates the results presented in Table 13 in the paper for SENMO and SENMO-npre.
 
-SENMO-npre: classifies Venmo notes as one or more of the sensitive categories from Table 1 using BERT without applying sensitive keywords pre-filters on the classification input (i.e, without using the list of known sensitive keywords).
+SENMO-npre: classifies Venmo notes as one or more of the sensitive categories from Table 1 using BERT (https://arxiv.org/abs/1810.04805) without applying sensitive keywords pre-filters on the classification input (i.e, without using the list of known sensitive keywords).
 
 SENMO: classifies Venmo notes using BERT as one or more of the sensitive categories from Table 1 after applying sensitive keywords pre-filters on the classification input (i.e, using the list of known sensitive keywords).
 
