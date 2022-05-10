@@ -3,6 +3,8 @@ PETS 2022, Issue 3, **Paper #126: I know what you did on Venmo: Discovering priv
 
 Authors: Rajat Tandon, Pithayuth Charnsethikul, Ishank Arora, Dhiraj Murthy, and Jelena Mirkovic
 
+Webpage: https://steel.isi.edu/projects/venmo/
+
 The classification framework SENMO (SENsitive content on venMO) classifies a Venmo transaction note as one or more of the sensitive categories from Table 1 of the paper (shown below as well). A note could also be classified as NON (non-sensitive), if it does not contain any sensitive information.
 
 **Category|Description|Example**
