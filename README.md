@@ -203,6 +203,8 @@ We further explain these arguments:
 * -o: path to a directory that testing set predictions and evaluation results will be stored.
 * -f: this option should be TF-IDF.
 
+**Note**: Again, we may not get the exact same results (as reported in the paper) but approximately similar results.
+
 ## BOW-NB
 
 To run Naive Bayes on bag-of-words technique, we run the following command:
@@ -227,3 +229,5 @@ We further explain these arguments:
 * -i: path to the preprocessed training set.
 * -o: path to a directory that testing set predictions and evaluation results will be stored.
 * -f: this option should be BOW.
+
+**Note**: Again, we may not get the exact same results (as reported in the paper) but approximately similar results.
