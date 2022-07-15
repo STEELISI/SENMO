@@ -1,0 +1,14 @@
+The lexicon is a collection of keywords for different categories from multiple sources.
+
+https://petsymposium.org/2022/files/papers/issue3/popets-2022-0069.pdf
+
+You can cite the lexicon as:
+
+@article{tandon2022know,
+  title={I know what you did on Venmo: Discovering privacy leaks in mobile social payments},
+  author={Tandon, Rajat and Charnsethikul, Pithayuth and Arora, Ishank and Murthy, Dhiraj and Mirkovic, Jelena},
+  journal={Proceedings on Privacy Enhancing Technologies},
+  volume={1},
+  pages={22},
+  year={2022}
+}
